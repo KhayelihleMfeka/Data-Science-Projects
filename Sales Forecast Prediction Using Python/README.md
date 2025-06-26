@@ -20,4 +20,4 @@ Below is the step-by-step implementation of the sales prediction model.
 
 2. Loading the dataset
 
-  * The dataset used for this project features like Row ID, Order ID, Customer ID, Customer ID, etc
+    * The dataset used for this project features like Row ID, Order ID, Customer ID, Customer ID, etc
