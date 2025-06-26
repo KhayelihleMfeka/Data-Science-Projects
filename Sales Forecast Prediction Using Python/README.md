@@ -1,1 +1,16 @@
+# Project 1
+Sales Forecast Prediction Using Python: Khayelihle Ngcebo Mfeka
 
+Sales forecasting is an important aspect of business planning, helping organizations predict future sales and make informed decisions about inventory management, marketing strategies and resource allocation. In this article we will explore how to build a sales forecast prediction model using Python.
+
+Sales forecasting involves estimating current or future sales based on data trends.
+
+Below is the step-by-step implementation of the sales prediction model.
+
+**Poject Steps**
+1. Import required libraries
+   * pandas
+   * matplotlib
+   * seaborn
+   * xgboost
+   * scikit learn
