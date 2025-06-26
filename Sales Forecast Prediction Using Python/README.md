@@ -32,7 +32,16 @@ Below is the step-by-step implementation of the sales prediction model.
 4. Feature Engineering - Creating Lagged Features
 
     In this step I create lagged features to capture the temporal patterns in the sales data.
+   
     * **create_lagged_features**: This function generates lagged features by shifting the sales          data by a given number of time steps like 1, 2, 3, etc. Lag features help the model learn          from the previous sales data to predict future sales.
     * **dropna**: Drops rows with missing values which are introduced due to the shift operation         when lagging.
+  
+5. Preparing the Data for Training
+
+   In this step I prepare the data for training and testing.
+   
+    * **drop(columns)**: Removes the 'Order Date' and 'Sales' columns from the feature set X             since they are not needed for training as sales is the target variable.
+    * **train_test_split**: Splits the dataset into training (80%) and testing (20%) sets.
+    * **shuffle=False**: ensures that the data is split in chronological order preserving the             time series structure.
 
 
