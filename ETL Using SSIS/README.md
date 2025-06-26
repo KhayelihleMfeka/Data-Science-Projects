@@ -19,7 +19,18 @@ To demonstrate the process, I will setup the following:
   3. **CSV File Setup** (*creation of a flat file to be transformed on VS Studio and loaded to our destination SQL Server database*)
   4. **Data Warehouse Setup** (*creation of a data warehouse(destination), once all the transformations are done the data ready for use will be stored on this database*)
 
-Code the setups [here]()
+Code to the setups [here]()
+
+The code will give me the following tables:
+
+**Source - SQL Server database - Financial Transactions**
+
+**Source - Excel - exchange_rates.xlsx**
+
+**Source -Flat/Csv - suppliers.csv**
+
+**Destination - SQL Server database - financial_data_warehouse**
+
 1.**Source Database Setup**
 
 1.1. Create Source Database for Financial Transactions
