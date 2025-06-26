@@ -44,4 +44,13 @@ Below is the step-by-step implementation of the sales prediction model.
     * **train_test_split**: Splits the dataset into training (80%) and testing (20%) sets.
     * **shuffle=False**: ensures that the data is split in chronological order preserving the             time series structure.
 
+6. Training the XGBoost Model
 
+    In this step I will train the XGBoost model. It is a machine learning algorithm that uses          gradient boosting to create highly accurate predictive models particularly well-suited for         regression tasks like sales forecasting.
+
+      * **XGBRegressor**: Initializes an XGBoost model for regression tasks.
+      * **objective='reg:squarederror'**: indicates that we are solving a regression problem i.e          predicting continuous sales values.
+      * **learning_rate (lr)**: Controls the step size at each iteration while moving toward a           minimum of the loss function with smaller values leading to slower convergence.
+       * **n_estimators**: The number of boosting rounds or trees to build with higher values             improving model accuracy but potentially leading to overfitting.
+      * **max_depth**: Defines the maximum depth of each decision tree controlling the complexity        of the model. Deeper trees can model more complex patterns.
+      * **fit**: Trains the model on the training data (X_train, y_train).
