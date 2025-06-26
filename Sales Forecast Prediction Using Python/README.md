@@ -1,9 +1,11 @@
-# Project 1
-**Sales Forecast Prediction using Python: Khayelihle Ngcebo Mfeka**
+**Project : Sales Forecast Prediction using Python**
+**Khayelihle Ngcebo Mfeka**
 
-Sales forecasting is an important aspect of business planning, helping organizations predict future sales and make informed decisions about inventory management, marketing strategies and resource allocation. In this article we will explore how to build a sales forecast prediction model using Python.
+# Project Overview
 
-Sales forecasting involves estimating current or future sales based on data trends.
+
+
+Sales forecasting is an important aspect of business planning, helping organizations predict future sales and make informed decisions about inventory management, marketing strategies and resource allocation. In this project I will explore how to build a sales forecast prediction model using Python.Sales forecasting involves estimating current or future sales based on data trends.
 
 Below is the step-by-step implementation of the sales prediction model.
 
@@ -51,9 +53,10 @@ Below is the step-by-step implementation of the sales prediction model.
       * **XGBRegressor**: Initializes an XGBoost model for regression tasks.
       * **objective='reg:squarederror'**: indicates that we are solving a regression problem i.e          predicting continuous sales values.
       * **learning_rate (lr)**: Controls the step size at each iteration while moving toward a           minimum of the loss function with smaller values leading to slower convergence.
-       * **n_estimators**: The number of boosting rounds or trees to build with higher values             improving model accuracy but potentially leading to overfitting.
-      * **max_depth**: Defines the maximum depth of each decision tree controlling the complexity        of the model. Deeper trees can model more complex patterns.
-      * **fit**: Trains the model on the training data (X_train, y_train).
+
+    * **n_estimators**: The number of boosting rounds or trees to build with higher values             improving model accuracy but potentially leading to overfitting.
+    * **max_depth**: Defines the maximum depth of each decision tree controlling the complexity        of the model. Deeper trees can model more complex patterns.
+    * **fit**: Trains the model on the training data (X_train, y_train).
   
 7. **Making Predictions and Evaluating the Model**
 
@@ -64,10 +67,16 @@ Below is the step-by-step implementation of the sales prediction model.
 
     **Results**: The RMSE of 734.63 indicates the average deviation between the actual and predicted sales values. A lower RMSE value               signifies better model accuracy, with the model's predictions being closer to the actual sales data. As we have large             amount of Sales data this RMSE score is accptable.
 
-8. Visualizing Results
+8. **Visualizing Results**
 
    In this step I will plot both the actual and predicted sales to visually compare the performance of the model.
 
      **Results**: As we can see the predicted and actual values are quite close to each other this proves the efficiency of our         model. Sales        forecasting using machine learning models like XGBoost can significantly enhance the accuracy of              predictions by capturing         temporal patterns in historical data. It can be used for improving sales predictions             helping businesses optimize inventory,       pricing and demand planning.
 
-   
+**Code**
+
+You can find the code for this project [here]().
+
+File overview:
+
+market_prediction.ipynb - a Jupyter notebook that contains all of the code.
