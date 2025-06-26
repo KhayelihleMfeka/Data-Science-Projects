@@ -21,7 +21,7 @@ Below is the step-by-step implementation of the sales prediction model.
 2. **Loading the dataset (pandas)**
 
     * The dataset used for this project features like Row ID, Order ID, Customer ID, Customer ID, etc.
-    * You can find the data [here](Sales Forecast Prediction Using Python/Sales_Data.csv)
+    * You can find the data [here](https://github.com/KhayelihleMfeka/Data-Science-Projects/blob/main/Sales%20Forecast%20Prediction%20Using%20Python/Sales_Data.csv)
 
 3. **Data Preprocessing and Visualization (pandas and matplotlib)**
 
