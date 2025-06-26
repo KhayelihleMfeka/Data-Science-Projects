@@ -19,7 +19,7 @@ To demonstrate the process, I will setup the following:
   3. **CSV File Setup** (*creation of a flat file to be transformed on VS Studio and loaded to our destination SQL Server database*)
   4. **Data Warehouse Setup** (*creation of a data warehouse(destination), once all the transformations are done the data ready for use will be stored on this database*)
 
-Code to the setups [here]()
+Code to the setups [here](https://github.com/KhayelihleMfeka/Data-Science-Projects/blob/main/ETL%20Using%20SSIS/Database%20setup.md)
 
 The code will give us the following tables:
 
