@@ -56,3 +56,9 @@ Below is the step-by-step implementation of the sales prediction model.
       * **fit**: Trains the model on the training data (X_train, y_train).
   
 7. **Making Predictions and Evaluating the Model**
+
+   In this step, I make predictions and evaluate the model performance using RMSE.
+   
+   * **predict**: Makes predictions on the test set (X_test) using the trained XGBoost model.
+   * **mean_squared_error**: Computes the Mean Squared Error (MSE) between actual and                   predicted values. We use np.sqrt to compute the Root Mean Squared Error (RMSE), which               is a standard metric for evaluating regression models.
+   
