@@ -61,4 +61,13 @@ Below is the step-by-step implementation of the sales prediction model.
    
    * **predict**: Makes predictions on the test set (X_test) using the trained XGBoost model.
    * **mean_squared_error**: Computes the Mean Squared Error (MSE) between actual and                   predicted values. We use np.sqrt to compute the Root Mean Squared Error (RMSE), which               is a standard metric for evaluating regression models.
+
+    **Results**: The RMSE of 734.63 indicates the average deviation between the actual and predicted sales values. A lower RMSE value               signifies better model accuracy, with the model's predictions being closer to the actual sales data. As we have large             amount of Sales data this RMSE score is accptable.
+
+8. Visualizing Results
+
+   In this step I will plot both the actual and predicted sales to visually compare the performance of the model.
+
+     **Results**: As we can see the predicted and actual values are quite close to each other this proves the efficiency of our         model. Sales        forecasting using machine learning models like XGBoost can significantly enhance the accuracy of              predictions by capturing         temporal patterns in historical data. It can be used for improving sales predictions             helping businesses optimize inventory,       pricing and demand planning.
+
    
