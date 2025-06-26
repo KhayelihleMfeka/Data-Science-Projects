@@ -1,4 +1,4 @@
-**Project : ETL using SSIS and Visual Studio : Khayelihle Ngcebo Mfeka**
+**Project : Extract Transform & Load (ETL) using SQL Server Integration Services(SSIS) and Visual Studio(VS Studio) : Khayelihle Ngcebo Mfeka**
 
 # Project Overview
 
