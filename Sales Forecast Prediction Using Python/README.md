@@ -1,5 +1,5 @@
 **Project : Sales Forecast Prediction using Python**
-**Khayelihle Ngcebo Mfeka**
+**: Khayelihle Ngcebo Mfeka**
 
 # Project Overview
 
