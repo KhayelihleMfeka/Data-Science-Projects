@@ -27,7 +27,7 @@ The code will give us the following tables:
 
 **Source - Excel - exchange_rates.xlsx**
 
-**Source -Flat/Csv - suppliers.csv**
+**Source -Flat/csv - suppliers.csv**
 
 **Destination - SQL Server database - financial_data_warehouse**
 
