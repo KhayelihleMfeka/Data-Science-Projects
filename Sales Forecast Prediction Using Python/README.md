@@ -75,8 +75,8 @@ Below is the step-by-step implementation of the sales prediction model.
 
 **Code**
 
-You can find the code for this project [here]().
+You can find the code for this project [here](https://github.com/KhayelihleMfeka/Data-Science-Projects/blob/main/Sales%20Forecast%20Prediction%20Using%20Python/Sales%20Forecast%20Prediction%20Project.ipynb).
 
 File overview:
 
-market_prediction.ipynb - a Jupyter notebook that contains all of the code.
+Sales Forecast Prediction Project.ipynb - a Jupyter notebook that contains all of the code.
