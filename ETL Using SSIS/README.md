@@ -21,7 +21,7 @@ To demonstrate the process, I will setup the following:
 
 Code to the setups [here]()
 
-The code will give me the following tables:
+The code will give us the following tables:
 
 **Source - SQL Server database - Financial Transactions**
 
