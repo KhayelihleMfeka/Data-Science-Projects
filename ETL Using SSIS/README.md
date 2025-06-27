@@ -14,22 +14,29 @@ Below is the complete step-by-step demonstration of the ETL process in SSIS:
 
 To demonstrate the process, I will setup the following:
 
-**Step 1**:
 
-  1. **Source Database Setup** (*setting up of `financial_transactions_db` database, `dbo.financial_transcations` and `dbo.customer_details` tables*)
-  2. **Excel File Setup** (*setting up `exchange_rates.xlsx` to be transformed on VS Studio and loaded to the destination SQL Server database*)
-  3. **CSV File Setup** (*setting up of `suppliers.csv` to be transformed on VS Studio and loaded to our destination SQL Server database*)
-  4. **Data Warehouse Setup** (*setting up of `financial_data_warehouse` database and `dbo.financial_analysis` table in the  a data warehouse(destination), once all the transformations are done the data ready for use will be loaded on this database*) -
+1. **Source Database Setup** (*setting up of `financial_transactions_db` database, `dbo.financial_transcations` and `dbo.customer_details` tables*)
+   
+2. **Excel File Setup** (*setting up `exchange_rates.xlsx` to be transformed on VS Studio and loaded to the destination SQL Server database*)
+   
+3. **CSV File Setup** (*setting up of `suppliers.csv` to be transformed on VS Studio and loaded to our destination SQL Server database*)
+
+4. **Data Warehouse Setup** (*setting up of `financial_data_warehouse` database and `dbo.financial_analysis` table in the  a data warehouse(destination), once all the transformations are done the data ready for use will be loaded on this database*) -
 
 Code to the setups [here](https://github.com/KhayelihleMfeka/Data-Science-Projects/blob/main/ETL%20Using%20SSIS/Database%20setup.md)
 
-**Step 2**: Tra
-
-  1. **Create a Visiual Studio Project** (*SSIS package*)
+5. **Create a Visiual Studio Project** (*SSIS package*) `financial_transcations_ETLProject.sln`
+components used:
       1. **Create control flow task**  (*Manages the sequence of tasks (e.g., Execute SQL Task, Data Flow Task, Script Task, File System Task*)
-      2. **Data Flow** (*A subsection of the Control Flow that manages the flow of data from sources to destinations, using transformations such as data conversions and lookups.*)
+           1.`exchange_rates ` data flow task - task to get the transformed exchange rates from Excel the OLE DB Destionation(financial_data_warehouse) exchange rates table
+           2.`suppliers` data flow task - task to get the tranmsformed suppliers table from a Csv File to OLE DB Destination(financial_data_warehouse) suppliers table)
+
+
+
+
+
+      3. **Data Flow** (*A subsection of the Control Flow that manages the flow of data from sources to destinations, using transformations such as data conversions and lookups.*)
      
-**Data Flow**
 
 * Suppliers flat file - Conversion done to match data warehouse - Stored OLE DB Destination
 * Exchange rate Excel File - Conversion done to match data warehouse - Stored OLE DB Destination
