@@ -25,14 +25,15 @@ To demonstrate the process, I will setup the following:
 
 Code to the setups [here](https://github.com/KhayelihleMfeka/Data-Science-Projects/blob/main/ETL%20Using%20SSIS/Database%20setup.md)
 
-5. **Create a Visiual Studio Project** (*SSIS package*) `financial_transcations_ETLProject.sln`
+5. **Create a Visiual Studio Project** (*SSIS package `financial_transcations_ETLProject.sln`*).
 
-components used:
+   components used:
 
-   1. **Create control flow task**  (*Manages the sequence of tasks (e.g., Execute SQL Task, Data Flow Task, Script Task, File System Task*)
+   **Create control flow task**  (*Manages the sequence of tasks (e.g., Execute SQL Task, Data Flow Task, Script Task, File System Task*)
 
-         1.`exchange_rates ` data flow task created - task to get the transformed exchange rates from Excel the OLE DB Destination(`financial_data_warehouse`) exchange rates table
-         2.`suppliers` data flow task created- task to get the tranmsformed suppliers table from a Csv File to OLE DB Destination(`financial_data_warehouse`) suppliers table)
+     - `exchange_rates ` data flow task created - task to get the transformed exchange rates from Excel the OLE DB Destination(`financial_data_warehouse`) exchange rates                table.
+
+     - `suppliers` data flow task created- task to get the tranmsformed suppliers table from a Csv File to OLE DB Destination(`financial_data_warehouse`) suppliers table).
 
 
 
