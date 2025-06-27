@@ -33,6 +33,15 @@ The code will give us the following tables:
 
 **Destination - SQL Server database - financial_data_warehouse**
 
+**Step 2**:
+
+  1. **Create a Visiual Studio Project** (*SSIS package*)
+      1. **Create control flow task**  (*Manages the sequence of tasks (e.g., Execute SQL Task, Data Flow Task, Script Task, File System Task*)
+      2. **Data Flow** (*A subsection of the Control Flow that manages the flow of data from sources to destinations, using transformations such as data conversions and lookups.*)
+    
+* Suppliers flat file - Conversion done to match data warehouse - Stored OLE DB Destination
+* Exchange rate Excel File - Conversion done to match data warehouse - Stored OLE DB Destination
+
 
 
 **ETL Workflow**
