@@ -16,25 +16,16 @@ To demonstrate the process, I will setup the following:
 
 **Step 1**:
 
-  1. **Source Database Setup** (*setting up of `financial_transactions_db` database, `dbo.financial_transcations` and `dbo.customer_details` tables [here]()*)
-  2. **Excel File Setup** (*setting up `exchange_rates.xlsx` of an Excel file to be transformed on VS Studio and loaded to the destination SQL Server database [here]()*)
-  3. **CSV File Setup** (*setting up of a flat file to be transformed on VS Studio and loaded to our destination SQL Server database [here]()*)
-  4. **Data Warehouse Setup** (*creation of a data warehouse(destination), once all the transformations are done the data ready for use will be stored on this database*) -
-  5. **MultiCast** (*no match suppliers go to OLE DB Destination and NULLS are split using Conditional Split and sent to Flat file destination with report of missing suppliers*)
+  1. **Source Database Setup** (*setting up of `financial_transactions_db` database, `dbo.financial_transcations` and `dbo.customer_details` tables*)
+  2. **Excel File Setup** (*setting up `exchange_rates.xlsx` to be transformed on VS Studio and loaded to the destination SQL Server database*)
+  3. **CSV File Setup** (*setting up of `suppliers.csv` to be transformed on VS Studio and loaded to our destination SQL Server database*)
+  4. **Data Warehouse Setup** (*setting up of `financial_data_warehouse` database and `dbo.financial_analysis` table in the  a data warehouse(destination), once all the transformations are done the data ready for use will be loaded on this database*) -
 
 Code to the setups [here](https://github.com/KhayelihleMfeka/Data-Science-Projects/blob/main/ETL%20Using%20SSIS/Database%20setup.md)
 
 The code will give us the following tables:
 
-**Source - SQL Server database - Financial Transactions**
-
-**Source - Excel - exchange_rates.xlsx**
-
-**Source -Flat/csv - suppliers.csv**
-
-**Destination - SQL Server database - financial_data_warehouse**
-
-**Step 2**:
+**Step 2**: Tra
 
   1. **Create a Visiual Studio Project** (*SSIS package*)
       1. **Create control flow task**  (*Manages the sequence of tasks (e.g., Execute SQL Task, Data Flow Task, Script Task, File System Task*)
@@ -45,6 +36,7 @@ The code will give us the following tables:
 * Suppliers flat file - Conversion done to match data warehouse - Stored OLE DB Destination
 * Exchange rate Excel File - Conversion done to match data warehouse - Stored OLE DB Destination
 * **Customer Transcations Task** - **OLE DB Source**(*JOIN Financial Transcations and Customer Details Tables*) - **Lookup the Exchange Rate** (*currency - from currency and return exchange rates*)- **UNION matched and No match outputs** - **Derive column(*amount*) to convert amount using the exchange rate** - **lookup Suppliers** (*using supplier name and bring back contact name and phone*)
+* **MultiCast** (*no match suppliers go to OLE DB Destination and NULLS are split using Conditional Split and sent to Flat file destination with report of missing suppliers*)
 
 
 
