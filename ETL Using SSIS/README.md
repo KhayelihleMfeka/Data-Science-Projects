@@ -17,8 +17,8 @@ To demonstrate the process, I will setup the following:
 **Step 1**:
 
   1. **Source Database Setup** (*setting up of `financial_transactions_db` database, `dbo.financial_transcations` and `dbo.customer_details` tables [here]()*)
-  2. **Excel File Setup** (*creation of an Excel file to be transformed on VS Studio and loaded to our destination SQL Server database*)
-  3. **CSV File Setup** (*creation of a flat file to be transformed on VS Studio and loaded to our destination SQL Server database*)
+  2. **Excel File Setup** (*setting up `exchange_rates.xlsx` of an Excel file to be transformed on VS Studio and loaded to the destination SQL Server database [here]()*)
+  3. **CSV File Setup** (*setting up of a flat file to be transformed on VS Studio and loaded to our destination SQL Server database [here]()*)
   4. **Data Warehouse Setup** (*creation of a data warehouse(destination), once all the transformations are done the data ready for use will be stored on this database*) -
   5. **MultiCast** (*no match suppliers go to OLE DB Destination and NULLS are split using Conditional Split and sent to Flat file destination with report of missing suppliers*)
 
