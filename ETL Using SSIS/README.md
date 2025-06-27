@@ -14,6 +14,8 @@ Below is the complete step-by-step demonstration of the ETL process in SSIS:
 
 To demonstrate the process, I will setup the following:
 
+**Step 1**:
+
   1. **Source Database Setup** (*creation of Financial Transcations Table and Customer Details Table on the SQL Server*)
   2. **Excel File Setup** (*creation of an Excel file to be transformed on VS Studio and loaded to our destination SQL Server database*)
   3. **CSV File Setup** (*creation of a flat file to be transformed on VS Studio and loaded to our destination SQL Server database*)
