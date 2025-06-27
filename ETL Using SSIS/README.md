@@ -28,8 +28,9 @@ Code to the setups [here](https://github.com/KhayelihleMfeka/Data-Science-Projec
 5. **Create a Visiual Studio Project** (*SSIS package*) `financial_transcations_ETLProject.sln`
 components used:
       1. **Create control flow task**  (*Manages the sequence of tasks (e.g., Execute SQL Task, Data Flow Task, Script Task, File System Task*)
-           1.`exchange_rates ` data flow task - task to get the transformed exchange rates from Excel the OLE DB Destionation(financial_data_warehouse) exchange rates table
-           2.`suppliers` data flow task - task to get the tranmsformed suppliers table from a Csv File to OLE DB Destination(financial_data_warehouse) suppliers table)
+
+         1.`exchange_rates ` data flow task created - task to get the transformed exchange rates from Excel the OLE DB Destination(`financial_data_warehouse`) exchange rates table
+         2.`suppliers` data flow task created- task to get the tranmsformed suppliers table from a Csv File to OLE DB Destination(`financial_data_warehouse`) suppliers table)
 
 
 
