@@ -19,7 +19,8 @@ To demonstrate the process, I will setup the following:
   1. **Source Database Setup** (*creation of Financial Transcations Table and Customer Details Table on the SQL Server*)
   2. **Excel File Setup** (*creation of an Excel file to be transformed on VS Studio and loaded to our destination SQL Server database*)
   3. **CSV File Setup** (*creation of a flat file to be transformed on VS Studio and loaded to our destination SQL Server database*)
-  4. **Data Warehouse Setup** (*creation of a data warehouse(destination), once all the transformations are done the data ready for use will be stored on this database*)
+  4. **Data Warehouse Setup** (*creation of a data warehouse(destination), once all the transformations are done the data ready for use will be stored on this database*) -
+  5. **MultiCast** (*no match suppliers go to OLE DB Destination and NULLS are split using Conditional Split and sent to Flat file destination with report of missing suppliers*)
 
 Code to the setups [here](https://github.com/KhayelihleMfeka/Data-Science-Projects/blob/main/ETL%20Using%20SSIS/Database%20setup.md)
 
