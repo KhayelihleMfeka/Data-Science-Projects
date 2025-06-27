@@ -6,8 +6,8 @@
 
 The business has customer purchase data in local currency, but needs that data converted and needs the Customer contact information with it.
 
-The purchase data is in SQL Server, the currency conversion data is in Excel, and the customer contact information is in a csv file.
-
+The purchase data is in SQL Server, the currency conversion data is in Excel, and the customer contact information is in a Csv file.
+            
 The task is to bring this data together in a new SQL Server database for the business.
 
 Below is the complete step-by-step demonstration of the ETL process in SSIS:
@@ -26,8 +26,10 @@ To demonstrate the process, I will setup the following:
 Code to the setups [here](https://github.com/KhayelihleMfeka/Data-Science-Projects/blob/main/ETL%20Using%20SSIS/Database%20setup.md)
 
 5. **Create a Visiual Studio Project** (*SSIS package*) `financial_transcations_ETLProject.sln`
+
 components used:
-      1. **Create control flow task**  (*Manages the sequence of tasks (e.g., Execute SQL Task, Data Flow Task, Script Task, File System Task*)
+
+   1. **Create control flow task**  (*Manages the sequence of tasks (e.g., Execute SQL Task, Data Flow Task, Script Task, File System Task*)
 
          1.`exchange_rates ` data flow task created - task to get the transformed exchange rates from Excel the OLE DB Destination(`financial_data_warehouse`) exchange rates table
          2.`suppliers` data flow task created- task to get the tranmsformed suppliers table from a Csv File to OLE DB Destination(`financial_data_warehouse`) suppliers table)
