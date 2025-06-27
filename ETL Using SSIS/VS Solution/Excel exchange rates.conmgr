@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Excel exchange rates"
+  DTS:DTSID="{CE6A1EB3-8C0B-4C6F-8E73-FB242EE10119}"
+  DTS:CreationName="EXCEL">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectByProxy">@[$Project::ExcelExchangeRates_ConnectByProxy]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ExcelFilePath">@[$Project::ExcelExchangeRates_ExcelFilePath1]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="0"
+      DTS:ConnectRetryInterval="0"
+      DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\khayo\OneDrive\Desktop\Training Material\Structured Query Language (SQL)\SQL Server Integration Services (SSIS)\exchange_rates.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
