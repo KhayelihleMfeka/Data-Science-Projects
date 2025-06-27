@@ -23,8 +23,6 @@ To demonstrate the process, I will setup the following:
 
 Code to the setups [here](https://github.com/KhayelihleMfeka/Data-Science-Projects/blob/main/ETL%20Using%20SSIS/Database%20setup.md)
 
-The code will give us the following tables:
-
 **Step 2**: Tra
 
   1. **Create a Visiual Studio Project** (*SSIS package*)
