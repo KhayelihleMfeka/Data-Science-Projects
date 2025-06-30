@@ -33,7 +33,7 @@ Code to the setups [here](https://github.com/KhayelihleMfeka/Data-Science-Projec
 
      - `exchange_rates ` data flow task created - task to get the transformed exchange rates from Excel the OLE DB Destination(`financial_data_warehouse`) exchange rates                table.
 
-     - `suppliers` data flow task created- task to get the tranmsformed suppliers table from a Csv File to OLE DB Destination(`financial_data_warehouse`) suppliers table).
+     - `suppliers` data flow task created- task to get the transformed suppliers table from a Csv File to OLE DB Destination(`financial_data_warehouse`) suppliers table).
 
 
 
