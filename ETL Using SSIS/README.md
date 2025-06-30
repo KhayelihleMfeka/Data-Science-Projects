@@ -30,24 +30,28 @@ Code to the setups [here](https://github.com/KhayelihleMfeka/Data-Science-Projec
    components used:
 
    **Create control flow task**  (*Manages the sequence of tasks (e.g., Execute SQL Task, Data Flow Task, Script Task, File System Task*)
+   
+   **Data Flow** (*A subsection of the Control Flow that manages the flow of data from sources to destinations, using transformations such as data conversions and lookups.*)
+   
 
-     - `exchange_rates ` data flow task created - task to get the transformed exchange rates from Excel the OLE DB Destination(`financial_data_warehouse`) exchange rates                table.
+    1.**Control flow task** -  exchange_rates - task to get the transformed exchange rates from Excel file to the OLE DB Destination(`financial_data_warehouse`) from                                          `exchange_rates` table.
+   
+     - *Data flow task* - exchange_rates - Gets Excel file `exchange_rates.xlsx` from path, converted to match data type and lenght of `dbo.exchange_rates` on the                       `financial_data_warehouse` database
+  
+    2.**Control flow task** -  suppliers - task to get the transformed suppliers from CSV to the OLE DB Destination (`financial_data_warehouse`) from `dbo.suppliers` table.
+   
+     - *Data flow task* - suppliers - Gets CSV file `suppliers.csv` from path, converted to match data type and lenght of `dbo.suppliers` on the `financial_data_warehouse`              database
 
-     - `suppliers` data flow task created- task to get the transformed suppliers table from a Csv File to OLE DB Destination(`financial_data_warehouse`) suppliers table).
+    3.**Control flow task** -  customer transcations - Gets dato the OLE DB Destination (`financial_data_warehouse`) from `dbo.suppliers` table.
+   
+     - *Data flow task* - financial transcations - Gets all data from both `dbo.customer_details` and `dbo.financial_transaction` from `financial_transcations_db` using                JOIN.
+     - Lookup exchange rates - lookup currency match with `from_currency` column on `dbo.exchange_rates` on the data warehouse and return exchange rate as output column.No             match redirected to no match ouput.
+     - UNION ALL - combine matched and no match entries from the lookup to include all data.
+     - Amount usd derived column - derive a column which will multiply the amount and exchange rate to get amount in USD.
+     - lookup suppliers - Lookup supplier name from `dbo.suppliers` on the data warehouse and return supplier contact name and number.
+     - Multicast - Run with the task and send data to `dbo.financial_analysis` on the data warehouse, also send a list on suppliers with no contact name to a CSV file                   using conditional split.
 
-
-
-
-
-      3. **Data Flow** (*A subsection of the Control Flow that manages the flow of data from sources to destinations, using transformations such as data conversions and lookups.*)
-     
-
-* Suppliers flat file - Conversion done to match data warehouse - Stored OLE DB Destination
-* Exchange rate Excel File - Conversion done to match data warehouse - Stored OLE DB Destination
-* **Customer Transcations Task** - **OLE DB Source**(*JOIN Financial Transcations and Customer Details Tables*) - **Lookup the Exchange Rate** (*currency - from currency and return exchange rates*)- **UNION matched and No match outputs** - **Derive column(*amount*) to convert amount using the exchange rate** - **lookup Suppliers** (*using supplier name and bring back contact name and phone*)
-* **MultiCast** (*no match suppliers go to OLE DB Destination and NULLS are split using Conditional Split and sent to Flat file destination with report of missing suppliers*)
-
-
+Below is the ETL Workflow for the project
 
 **ETL Workflow**
 
